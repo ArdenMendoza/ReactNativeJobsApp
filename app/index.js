@@ -1,7 +1,7 @@
 import {View, ScrollView, SafeAreaView} from 'react-native'
 import {useState} from 'react'
 import {Stack, useRouter} from 'expo-router'
-import { COLORS, icons, images, SIZES } from "../constants";
+import { COLORS, icons, images, SIZES } from '../constants';
 import {
   Nearbyjobs,
   Popularjobs,
@@ -19,9 +19,9 @@ const Home = () => {
           headerShadowVisible: false,
           headerLeft: () => (
             <ScreenHeaderBtn iconUrl={icons.menu} dimention="60%" />
-          ),
+          ),  
           headerRight: () => (
-            <ScreenHeaderBtn iconUrl={icons.profile} dimention="100%" />
+            <ScreenHeaderBtn iconUrl={images.profile} dimention="100%" />
           ),
           headerTitle: "",
         }}
@@ -29,6 +29,8 @@ const Home = () => {
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={{ flex: 1, padding: SIZES.medium }}>
           <Welcome/>
+          <Popularjobs/>
+          <Nearbyjobs/>
         </View>
       </ScrollView>
     </SafeAreaView>
